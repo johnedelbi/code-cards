@@ -1,0 +1,7 @@
+{
+  "name": "code cards",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
