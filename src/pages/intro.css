@@ -11,3 +11,8 @@ ion-content {
 .start-btn {
     margin: 100px;
 }
+
+.figma-btn a {
+    color: #fff;
+    text-decoration: none;
+}
