@@ -8,6 +8,11 @@ ion-content {
     font-size: 70px;
 }
 
-.intro-btn {
+.start-btn {
     margin: 100px;
+    width: 300px;
+}
+
+.icon-btn {
+    margin: 20px;
 }

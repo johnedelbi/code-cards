@@ -9,11 +9,11 @@ export const Intro: React.FC = () => {
     <IonContent className="ion-padding ion-text-center" fullscreen>
       <h1 className='logo-text'>Code Cards <br />
         Quiz game</h1>
-      <IonButton routerLink='/game' expand="block" size="large" className='intro-btn'>Start</IonButton>
+      <IonButton routerLink='/game' size="large" className='start-btn'>Start</IonButton>
 
-      <IonButton expand="block" size="large" className='intro-btn' href='https://www.figma.com/file/YC05QHHI8B1amHqsrHrYO7/code-card-app?node-id=1%3A11&t=6AOQupLSKEg7qTRg-1'><IonIcon color="light" slot="end" icon={logoFigma}></IonIcon>check the design on Figma</IonButton>
+      <p>check the design on Figma<IonButton size="large" className='icon-btn' href='https://www.figma.com/file/YC05QHHI8B1amHqsrHrYO7/code-card-app?node-id=1%3A11&t=6AOQupLSKEg7qTRg-1' target='_blank'><IonIcon slot="icon-only" icon={logoFigma}></IonIcon></IonButton></p>
 
-      <IonButton expand="block" size="large" className='intro-btn' href='https://github.com/johnedelbi/code-cards'><IonIcon color="light" slot="end" icon={logoGithub}></IonIcon>check source code on github</IonButton>
+      <p>check source code on github <IonButton color="light" size="large" className='icon-btn' href='https://github.com/johnedelbi/code-cards' target='_blank'><IonIcon slot="icon-only" icon={logoGithub}></IonIcon></IonButton></p>
     </IonContent>
   );
 };
