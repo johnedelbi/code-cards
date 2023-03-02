@@ -1,3 +1,18 @@
-body {
-    background-color: #404041;
+ion-content {
+    --background: #404041;
+    --color: #fff;
+}
+
+.logo-text {
+    font-family: 'Iceberg', sans-serif;
+    font-size: 70px;
+}
+
+.start-btn {
+    margin: 100px;
+    width: 300px;
+}
+
+.icon-btn {
+    margin: 20px 0 20px 20px;
 }
