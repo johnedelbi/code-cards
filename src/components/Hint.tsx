@@ -1,13 +1,16 @@
 import { IonButton, IonButtons, IonContent, IonHeader, IonModal, IonTitle, IonToolbar } from '@ionic/react';
 import { useState } from 'react';
 
+import './Hint.css';
+
+
 export const Hint: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
 
         <IonContent>
-            <IonButton expand="block" size="large" onClick={() => setIsOpen(true)}>
+            <IonButton className='hint-btn' expand="block" size="large" onClick={() => setIsOpen(true)}>
                 need help ! click to get a hint
             </IonButton>
             <IonModal isOpen={isOpen}>
