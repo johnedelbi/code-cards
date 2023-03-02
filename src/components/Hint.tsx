@@ -1,6 +1,5 @@
 import { IonButton, IonButtons, IonContent, IonHeader, IonModal, IonTitle, IonToolbar } from '@ionic/react';
 import { useState } from 'react';
-import './hint.css';
 
 export const Hint: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
