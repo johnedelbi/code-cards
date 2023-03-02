@@ -1,3 +1,8 @@
-body {
-    background-color: #404041;
+ion-content {
+    --background: #404041;
+    --color: #fff;
+}
+
+.answer-btn {
+    margin: 20px 0 20px 20px;
 }
