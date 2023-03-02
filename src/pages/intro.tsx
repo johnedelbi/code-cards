@@ -1,18 +1,17 @@
-import { IonContent, IonItem, IonLabel, IonPage } from '@ionic/react';
+import { IonContent } from '@ionic/react';
 import './intro.css';
 
 export const Intro: React.FC = () => {
   return (
-    <IonPage>
-      <IonContent fullscreen>
-        <IonItem>
-          <IonLabel>
-            <h1>intro</h1>
-            <p>intro</p>
-          </IonLabel>
-        </IonItem>
-      </IonContent>
-    </IonPage>
+
+    <IonContent className="ion-padding" fullscreen>
+
+      <div className="ion-text-center">
+        <h1 className='logo-text'>Code Cards <br />
+          Quiz game</h1>
+      </div>
+
+    </IonContent>
   );
 };
 

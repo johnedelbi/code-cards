@@ -1,3 +1,9 @@
-body {
-    background-color: #404041;
+ion-content {
+    --background: #404041;
+    --color: #fff;
+}
+
+.logo-text {
+    font-family: 'Iceberg', sans-serif;
+    font-size: 70px;
 }
