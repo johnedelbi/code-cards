@@ -8,11 +8,6 @@ ion-content {
     font-size: 70px;
 }
 
-.start-btn {
+.intro-btn {
     margin: 100px;
-}
-
-.figma-btn a {
-    color: #fff;
-    text-decoration: none;
 }
