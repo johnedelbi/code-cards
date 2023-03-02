@@ -7,3 +7,7 @@ ion-content {
     font-family: 'Iceberg', sans-serif;
     font-size: 70px;
 }
+
+.start-btn {
+    margin: 100px;
+}
