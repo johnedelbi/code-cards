@@ -4,7 +4,7 @@ import { IonReactRouter } from '@ionic/react-router';
 
 import { Intro } from './pages/intro';
 import { Game } from './pages/Game';
-import { Result } from './pages/Result';
+import { Result } from './components/Result';
 
 
 /* Core CSS required for Ionic components to work properly */
