@@ -1,4 +1,4 @@
-import { IonButton, IonContent, IonPage } from '@ionic/react';
+import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 
 import { CodeCard } from '../components/CodeCard'
 import { Hint } from '../components/Hint'
@@ -35,6 +35,11 @@ export const Game: React.FC = () => {
 
     return (
         <IonPage>
+            <IonHeader>
+                <IonToolbar>
+                    <IonTitle>Question {`${currentQuestion + 1} / ${question.length} `}</IonTitle>
+                </IonToolbar>
+            </IonHeader>
             <IonContent>
                 {showScore ? (
                     <Result score={score} totalQuestions={question.length} onTryAgain={tryAgain} />
