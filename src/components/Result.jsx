@@ -2,7 +2,12 @@ import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCon
 
 import './Result.css'
 
-export const Result: React.FC = () => {
+export const Result = (props) => {
+
+    const handleTryAgainClick = () => {
+        props.onTryAgain();
+    };
+
     return (
         <IonContent className="ion-padding ion-text-center " fullscreen>
             <h1 className='title-text'>you result </h1>
@@ -12,10 +17,10 @@ export const Result: React.FC = () => {
                 </IonCardHeader>
 
                 <IonCardContent className='title-text score-color'>
-                    24/30
+                    {props.score}/{props.totalQuestions}
                 </IonCardContent>
             </IonCard>
-            <IonButton routerLink='/game' size="large" className='start-btn'>try again</IonButton>
+            <IonButton onClick={handleTryAgainClick} size="large" className='start-btn'>Try Again</IonButton>
 
 
         </IonContent>
