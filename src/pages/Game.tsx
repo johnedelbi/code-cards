@@ -35,16 +35,17 @@ export const Game: React.FC = () => {
 
     return (
         <IonPage>
-            <IonHeader>
-                <IonToolbar>
-                    <IonTitle>Question {`${currentQuestion + 1} / ${question.length} `}</IonTitle>
-                </IonToolbar>
-            </IonHeader>
             <IonContent>
                 {showScore ? (
                     <Result score={score} totalQuestions={question.length} onTryAgain={tryAgain} />
                 ) : (
                     <>
+                        <IonHeader>
+                            <IonToolbar>
+                                <IonTitle className='question-title'>Question {`${currentQuestion + 1} / ${question.length} `}</IonTitle>
+                            </IonToolbar>
+
+                        </IonHeader>
                         <CodeCard code={question[currentQuestion].code}
                             question={question[currentQuestion].question} />
                         <div className='quiz-options'>
