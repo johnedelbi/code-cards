@@ -1,4 +1,4 @@
-import { IonButton, IonContent, IonPage } from '@ionic/react';
+import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 
 import { CodeCard } from '../components/CodeCard'
 import { Hint } from '../components/Hint'
@@ -40,6 +40,12 @@ export const Game: React.FC = () => {
                     <Result score={score} totalQuestions={question.length} onTryAgain={tryAgain} />
                 ) : (
                     <>
+                        <IonHeader>
+                            <IonToolbar>
+                                <IonTitle className='question-title'>Question {`${currentQuestion + 1} / ${question.length} `}</IonTitle>
+                            </IonToolbar>
+
+                        </IonHeader>
                         <CodeCard code={question[currentQuestion].code}
                             question={question[currentQuestion].question} />
                         <div className='quiz-options'>
