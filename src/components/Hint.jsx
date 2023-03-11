@@ -3,13 +3,12 @@ import { useState } from 'react';
 
 import './Hint.css';
 
-
-export const Hint: React.FC = () => {
+export const Hint = (hintString) => {
     const [isOpen, setIsOpen] = useState(false);
-
     return (
 
         <IonContent>
+
             <IonButton className='hint-btn' expand="block" size="large" onClick={() => setIsOpen(true)}>
                 need help ! click to get a hint
             </IonButton>
@@ -24,12 +23,11 @@ export const Hint: React.FC = () => {
                 </IonHeader>
                 <IonContent className="ion-padding">
                     <p>
-                        the hint details will be here
+                        {hintString.hint}
                     </p>
                 </IonContent>
             </IonModal>
         </IonContent>
-
     );
 };
 

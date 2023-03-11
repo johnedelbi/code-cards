@@ -4,8 +4,6 @@ import { IonReactRouter } from '@ionic/react-router';
 
 import { Intro } from './pages/intro';
 import { Game } from './pages/Game';
-import { Result } from './components/Result';
-
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -37,9 +35,6 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/game">
           <Game />
-        </Route>
-        <Route exact path="/result">
-          <Result />
         </Route>
         <Route exact path="/">
           <Redirect to="/intro" />
