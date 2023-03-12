@@ -5,7 +5,7 @@ import './Result.css'
 export const Result = (props) => {
 
     const handleTryAgainClick = () => {
-        props.onTryAgain();
+        props.onresetScore();
     };
 
     return (
