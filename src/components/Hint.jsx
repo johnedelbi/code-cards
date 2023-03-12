@@ -10,7 +10,7 @@ export const Hint = (hintString) => {
         <IonContent>
 
             <IonButton className='hint-btn' expand="block" size="large" onClick={() => setIsOpen(true)}>
-                need help ! click to get a hint
+                need help ! get a hint
             </IonButton>
             <IonModal isOpen={isOpen}>
                 <IonHeader>

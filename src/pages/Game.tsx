@@ -1,4 +1,4 @@
-import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonContent, IonHeader, IonIcon, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 
 import { CodeCard } from '../components/CodeCard'
 import { Hint } from '../components/Hint'
@@ -8,6 +8,7 @@ import question from '../question.json';
 import React, { useState } from 'react';
 
 import './game.css';
+import { exit } from 'ionicons/icons';
 
 export const Game: React.FC = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -37,14 +38,24 @@ export const Game: React.FC = () => {
         <IonPage>
             <IonContent>
                 {showScore ? (
-                    <Result score={score} totalQuestions={question.length} onTryAgain={tryAgain} />
+                    <>
+                        <Result score={score} totalQuestions={question.length} onTryAgain={tryAgain} />
+                        <IonButton size="large" expand='block' routerLink='/intro' onClick={tryAgain}>
+                            Exit!
+                            <IonIcon slot="start" icon={exit}></IonIcon>
+                        </IonButton>
+                    </>
                 ) : (
                     <>
                         <IonHeader>
                             <IonToolbar>
                                 <IonTitle className='question-title'>Question {`${currentQuestion + 1} / ${question.length} `}</IonTitle>
-                            </IonToolbar>
+                                <IonButton className='exit-btn' routerLink='/intro' onClick={tryAgain}>
+                                    Exit!
+                                    <IonIcon slot="start" icon={exit}></IonIcon>
+                                </IonButton>
 
+                            </IonToolbar>
                         </IonHeader>
                         <CodeCard code={question[currentQuestion].code}
                             question={question[currentQuestion].question} />
