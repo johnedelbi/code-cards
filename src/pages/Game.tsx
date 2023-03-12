@@ -28,7 +28,7 @@ export const Game: React.FC = () => {
         }
     };
 
-    const tryAgain = () => {
+    const resetScore = () => {
         setCurrentQuestion(0);
         setScore(0);
         setShowScore(false);
@@ -39,8 +39,8 @@ export const Game: React.FC = () => {
             <IonContent>
                 {showScore ? (
                     <>
-                        <Result score={score} totalQuestions={question.length} onTryAgain={tryAgain} />
-                        <IonButton size="large" expand='block' routerLink='/intro' onClick={tryAgain}>
+                        <Result score={score} totalQuestions={question.length} onresetScore={resetScore} />
+                        <IonButton size="large" expand='block' routerLink='/intro' onClick={resetScore}>
                             Exit!
                             <IonIcon slot="start" icon={exit}></IonIcon>
                         </IonButton>
@@ -50,7 +50,7 @@ export const Game: React.FC = () => {
                         <IonHeader>
                             <IonToolbar>
                                 <IonTitle className='question-title'>Question {`${currentQuestion + 1} / ${question.length} `}</IonTitle>
-                                <IonButton className='exit-btn' routerLink='/intro' onClick={tryAgain}>
+                                <IonButton className='exit-btn' routerLink='/intro' onClick={resetScore}>
                                     Exit!
                                     <IonIcon slot="start" icon={exit}></IonIcon>
                                 </IonButton>
