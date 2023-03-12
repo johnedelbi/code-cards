@@ -10,3 +10,7 @@ ion-content {
 .question-title {
     text-align: center;
 }
+
+.exit-btn {
+    float: right;
+}

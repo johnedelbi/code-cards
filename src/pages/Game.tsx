@@ -1,4 +1,4 @@
-import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonContent, IonHeader, IonIcon, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 
 import { CodeCard } from '../components/CodeCard'
 import { Hint } from '../components/Hint'
@@ -8,6 +8,7 @@ import question from '../question.json';
 import React, { useState } from 'react';
 
 import './game.css';
+import { exit } from 'ionicons/icons';
 
 export const Game: React.FC = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -27,7 +28,7 @@ export const Game: React.FC = () => {
         }
     };
 
-    const tryAgain = () => {
+    const resetScore = () => {
         setCurrentQuestion(0);
         setScore(0);
         setShowScore(false);
@@ -37,14 +38,24 @@ export const Game: React.FC = () => {
         <IonPage>
             <IonContent>
                 {showScore ? (
-                    <Result score={score} totalQuestions={question.length} onTryAgain={tryAgain} />
+                    <>
+                        <Result score={score} totalQuestions={question.length} onresetScore={resetScore} />
+                        <IonButton size="large" expand='block' routerLink='/intro' onClick={resetScore}>
+                            Exit!
+                            <IonIcon slot="start" icon={exit}></IonIcon>
+                        </IonButton>
+                    </>
                 ) : (
                     <>
                         <IonHeader>
                             <IonToolbar>
                                 <IonTitle className='question-title'>Question {`${currentQuestion + 1} / ${question.length} `}</IonTitle>
-                            </IonToolbar>
+                                <IonButton className='exit-btn' routerLink='/intro' onClick={resetScore}>
+                                    Exit!
+                                    <IonIcon slot="start" icon={exit}></IonIcon>
+                                </IonButton>
 
+                            </IonToolbar>
                         </IonHeader>
                         <CodeCard code={question[currentQuestion].code}
                             question={question[currentQuestion].question} />
